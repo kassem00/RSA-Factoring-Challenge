@@ -33,7 +33,7 @@ int main(int argc, char **argv)
  */
 void factor(char *buf)
 {
-	u_int32_t num = atoi(buf), i = 2;
+	unsigned long long int num = atoll(buf), i = 2;
 	int x = 0;
 	while (i < num)
 	{
@@ -47,5 +47,5 @@ void factor(char *buf)
 		putc(buf[x],stdout);
 	x++;
 	}	
-	printf("=%d*%d\n", num / i, i);
+	printf("=%lld*%lld\n", num / i, i);
 }

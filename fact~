@@ -1,0 +1,17 @@
+#!/usr/bin/python3
+
+import sys
+
+file_ = open(sys.argv[1], "r")
+li = file_.readlines()
+
+for x in range(len(li)):
+    temp = int(li[x])
+    i = 2
+    while i <= temp:
+        if temp % i == 0:
+            z = temp / i
+            print("{}={}*{}".format(li, z, temp),end="")
+            break
+        else:
+            i += 1
