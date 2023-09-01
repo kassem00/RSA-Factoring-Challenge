@@ -1,0 +1,24 @@
+#!/usr/bin/python3
+
+import sys
+
+file_ = open(sys.argv[1], "r")
+li = file_.readlines()
+
+for x in range(len(li)):
+    temp = int(li[x])
+    i = 2
+    while i <= temp:
+        if (temp % i)  == 0:
+            z = temp // i
+            print("{}={}*{}".format(temp, z, i))
+            break
+        else:
+            i += 1
+
+def fun(x, i):
+        if (x % i)  == 0 and i <= x:
+            return (i)
+        else:
+            i += 1
+            fun(x, i)
