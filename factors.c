@@ -1,20 +1,22 @@
 #include "lib.h"
 #define BUF_SIZE 1024
-
+/**
+ * main - Factorize as many numbers as possible
+ * @argc: Number of arguments
+ * @argv: Pointer to arguments
+ * Return: int value
+ */
 int main(int argc, char **argv)
 {
 	FILE *fip;
 	char *buf = calloc(BUF_SIZE, sizeof(char));
 	size_t s_buf = 255;
 	ssize_t lines = 0;
-
 	if (argc != 2)
 		exit(EXIT_FAILURE);
-
 	fip = fopen(argv[1], "r");
 	if (fip == NULL)
 		exit(EXIT_FAILURE);
-
 	lines = getline(&buf, &s_buf, fip);
 	while (lines != -1)
 	{
@@ -22,22 +24,28 @@ int main(int argc, char **argv)
 		lines = getline(&buf, &s_buf, fip);
 	}
 
-	return 0;
+	return (0);
 }
-
+/**
+ * factor - Factorize as many numbers as possible
+ * @buf: string to be converted to number
+ * Return: void
+ */
 void factor(char *buf)
 {
-	unsigned long long int num = atoll(buf);
-	unsigned long long int i = 2;
+	u_int32_t num = atoi(buf), i = 2;
 	int x = 0;
-
-	while (i <= num)
+	while (i < num)
 	{
 		if (num % i == 0)
 			break;
 		else
 			i++;
 	}
-
-	printf("%llu=%llu*%llu\n", num, num / i, i);
+	while (buf[x] != '\n')
+	{	
+		putc(buf[x],stdout);
+	x++;
+	}	
+	printf("=%d*%d\n", num / i, i);
 }
