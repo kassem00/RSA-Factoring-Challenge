@@ -1,0 +1,22 @@
+import sys
+import math
+
+def fun(x, i):
+    if i > math.isqrt(x):
+        return x
+    elif x % i == 0:
+        return i
+    else:
+        return fun(x, i + 1)
+
+file_path = sys.argv[1]
+
+with open(file_path, "r") as file_:
+    li = file_.readlines()
+
+for line in li:
+    temp = int(line.strip())
+    i = 2
+    i = fun(temp, i)
+    z = int(temp / i)
+    print("{}={}*{}".format(temp, z, i))
