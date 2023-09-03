@@ -16,7 +16,7 @@ x = 0
 temp = int(li[x])
 i = 2
 while i <= temp:
-    if i > 100 or len(li[x]) < 18:
+    if i > 50:
             filename = sys.argv[1].encode('utf-8')
             get_line(x, filename)
             break;
