@@ -22,7 +22,7 @@ for x in range(len(li)):
             get_line(x, filename)
             break;
         if (temp % i)  == 0:
-            res = temp // i
+            res = temp / i
             print("{}={}*{}".format(temp, res, i))
             break
         else:
