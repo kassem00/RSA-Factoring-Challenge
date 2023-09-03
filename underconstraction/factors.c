@@ -22,7 +22,7 @@ void factor(char *buf)
 	x++;
 	}
 	printf("=%lld*%lld\n", num / i, i);
-}o
+}
 
 /**
  * g_g_fun - spcafic getline from file
