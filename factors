@@ -18,13 +18,13 @@ for x in range(len(li)):
     i = 2
     while i <= temp:
         if i > 50:
-            if len(li[x]) <= 18:
+            if len(li[x]) <= 20:
                 filename = sys.argv[1].encode('utf-8')
                 get_line(x, filename)
             break;
         if (temp % i)  == 0:
             res = temp / i
-            print("{}={}*{}".format(temp, res, i))
+            print("{:d}={:d}*{:d}".format(int(temp), int(res), i))
             break
         else:
             i += 1
