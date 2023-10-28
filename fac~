@@ -22,8 +22,12 @@ for x in range(len(li)):
             get_line(x, filename)
             break
         if (temp % i) == 0:
-            res = temp // i
+            res = temp / i
             print("{:d}={:d}*{:d}".format(int(temp), int(res), i))
             break
         else:
             i += 1
+
+        print("DEBUG: x =", x)
+        print("DEBUG: temp =", temp)
+        print("DEBUG: i =", i)
