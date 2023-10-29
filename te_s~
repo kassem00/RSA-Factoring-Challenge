@@ -3,13 +3,9 @@ import sys
 import math
 import ctypes
 
-lib = ctypes.CDLL("./liball.so")
-factor_c = lib.factor
-get_line = lib.g_g_fun
-lib.g_g_fun.argtypes = [ctypes.c_int, ctypes.c_char_p]
-lib.g_g_fun.restype = None
-
 file_ = open(sys.argv[1], "r")
+file_2 = open(sys.argv[2], "r")
+
 li = file_.readlines()
 file_.close()
 

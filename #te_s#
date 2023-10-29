@@ -1,0 +1,16 @@
+#!/usr/bin/python3
+import sys
+import math
+import ctypes
+
+file_ = open(sys.argv[1], "r")
+file_2 = open(sys.argv[2], "r")
+
+li = file_.readlines()
+li_2 = file_2.readlines()
+file_.close()
+file_2.close()
+
+for x in range(len(li)):
+        if li[x] == lis_2[x]:
+                print(li )
